@@ -101,6 +101,7 @@ npm ERR! enoent
 
 npm ERR! A complete log of this run can be found in: C:\Users\91963\AppData\Local\npm-cache_logs\2026-10-28T03_52_15_030Z-debug-0.log
 
+We can clear the cache before and then run the command like npm create vite
 
 Solution:- 
 
@@ -111,7 +112,7 @@ cd D:\python\react\react-test npm install
 
 
 2. npm run lint reports StrictMode and App as unused
-Both are used in JSX in main.jsx. The ESLint configuration isn’t recognizing JSX usage when checking for unused variables, so these appear to be false positives.
+Both are used in JSX in main.jsx. The ESLint configuration isn’t recognizing JSX usage when checking for unused variables, so these appear to be false positives. FUll Form of the JSX is the Javasctipt XML
 To solve it: Update the ESLint configuration to recognize JSX references—for example, configure the React ESLint plugin’s react/jsx-uses-vars rule—or adjust the unused-variable rule for JSX files. The plugin-based fix is more precise because it still catches genuinely unused variables.
 
 Verified: npm install and npm run build succeed. Lint currently fails on those two warnings-as-errors; I haven’t changed the lint configuration.
@@ -178,6 +179,8 @@ we can write code inside the Fragments
 </>
 
 During Installation we install the esLint and we have the file inside the react folder file name will be .eslintrc.cjs. That file helps to set some coding rules inside the file and the we can customize the some rules of the coding standard
+
+REACT COMPONENT
 
 
 
