@@ -1,0 +1,190 @@
+What is React
+Js library used to create the compiles UI frontend developed by meta. React use to component based Architecture. Like one component for the one feature. 
+
+JS Essentials For the React JS
+Basics:- Variables, Loop, conditional Statement IF/Else
+Functions:- Arrow, Return
+Arrays:- Map, Filter, Return, Reduce, For Each
+Objects:- Data, Object Creations
+ES6+ Features:- Extra Features in JS
+Asynchronous:- Async, Sync, Promises, Event Loop
+
+Steps:- Create Folder:-Name React-js-practice
+Open in the VS code
+
+Js Library:- GSAP:- for animations, Lenis for the smooth scrolling, ReactJs UI Framework
+
+Framework:- NextJs, Angular
+
+Library Used to create the one particular feature like for Animation use GSAP, For Smooth Scrolling use Lenis, For UI use the ReactJs
+
+Framework:- Provide everything inbuilt we can not much more customizations
+
+Framework is the Inbuild House we can do much more the customizations
+
+Library is the Empty plot where we can build things as per our requirements
+
+React Import & Export  
+This will be in use where I'll work with multiple files
+We can import all files or the simple one Default file
+"NEED TO LEARN TYPES OF IMPORT"
+default Export and the Named export 
+
+Real DOM or the Virtual Dom
+
+Real Dom is like the Html Tree where If I change anything in the webpage then I need to Reload the whole page.
+
+Virtual Dom creates a copy of the Real Dom and If we change in the particular area then the that particul area will change in the Real DOM no need to reload the whole page
+
+Vite:- Need to Study about the Vite
+We can create the folder using the Vite command "npm create vite@latest" 
+
+I get the issue 
+
+npm create vite@latest
+Need to install the following packages:
+  create-vite@9.3.2
+Ok to proceed? (y) y
+
+create-vite v9.3.2
+
+│
+◇  Project name:
+│  one-project
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Which linter to use?
+│  ESLint
+│
+◇  Install with npm and start now?
+│  No
+│
+◇  Scaffolding project in D:\python\react\one-project...
+Error: ENOENT: no such file or directory, scandir 'C:\Users\91963\AppData\Local\npm-cache\_npx\1415fee72ff6294b\node_modules\create-vite\template-react'
+    at Object.readdirSync (node:fs:1584:26)
+    at Ut (file:///C:/Users/91963/AppData/Local/npm-cache/_npx/1415fee72ff6294b/node_modules/create-vite/dist/index.js:76:2541)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: 'C:\\Users\\91963\\AppData\\Local\\npm-cache\\_npx\\1415fee72ff6294b\\node_modules\\create-vite\\template-react'
+}
+
+
+Steps to resolve this issue clean the _npx chache files after deleting the files path "AppData\Local\npm-cache\_npx"
+
+Step 1 — Check whether the downloaded Vite package contains its templates
+Run this command in PowerShell: npm view create-vite@9.3.2 dist.tarball
+
+Then run: npm view create-vite@9.3.2 dist.unpackedSize
+
+
+npm create vite@9.1.2 react-test -- --template react
+
+Get issue While Running the Npm install 
+
+issue:- 
+
+npm install
+npm ERR! code ENOENT
+npm ERR! syscall open
+npm ERR! path D:\python\react\react-test/package.json
+npm ERR! errno -4058
+npm ERR! enoent ENOENT: no such file or directory, open 'D:\python\react\react-test\package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent
+
+npm ERR! A complete log of this run can be found in: C:\Users\91963\AppData\Local\npm-cache_logs\2026-10-28T03_52_15_030Z-debug-0.log
+
+
+Solution:- 
+
+1. npm install couldn’t find package.json
+The project was missing its npm manifest, so npm had no dependency list to install. I added package.json and regenerated package-lock.json.
+Now: Run commands from the project directory: 
+cd D:\python\react\react-test npm install
+
+
+2. npm run lint reports StrictMode and App as unused
+Both are used in JSX in main.jsx. The ESLint configuration isn’t recognizing JSX usage when checking for unused variables, so these appear to be false positives.
+To solve it: Update the ESLint configuration to recognize JSX references—for example, configure the React ESLint plugin’s react/jsx-uses-vars rule—or adjust the unused-variable rule for JSX files. The plugin-based fix is more precise because it still catches genuinely unused variables.
+
+Verified: npm install and npm run build succeed. Lint currently fails on those two warnings-as-errors; I haven’t changed the lint configuration.
+
+Project Structure
+We have the app.jsx is the file where the starting structure code we get
+and app.jsx code function export the code using the default export APP whole code file
+
+That App.jsx import in the main.jsx this file is the parent of the app.jsx file and the app.jsx file code will visible
+
+
+The Work Tree of the React Like the started Point of the 
+Index.html --> id == root --> main.jsx (create root element initlize the app function)  -->  App.jsx (code write inside the .jsx file)
+
+Need to install the React snippet extensions name "Simple React Snippets
+by Burke Holland"  so that we can get the react suggestions and the short key's for the code
+
+Other useful extensions 
+Extension :- ES7+ React/Redux/React-Native Snippets
+Extension :- ES7 React/Redux/GraphQL/React
+
+Simple React Extension short key:- rafce (react arrow function export component)
+
+In the  App Function or the any function we can not pass the two contents in the function we have the only one like 
+
+We can't do this type of code because we have 2 div inside the function
+
+function app(){
+return(
+<div>
+   <h1>Heading One</h1>
+   <h2> Heading Two</h2>
+</div>
+<h1>Heading Three</h1>
+<h2>Heading Four </h2>
+)
+}
+
+We can do like this all the code inside the one div
+
+function app(){
+return(
+<div>
+   <h1>Heading One</h1>
+   <h2> Heading Two</h2>
+</div>
+<h1>Heading Three</h1>
+<h2>Heading Four </h2>
+</div>
+)
+}
+
+OR we can use the Fragments in the React like this <></>
+
+we can write code inside the Fragments 
+
+<>
+<div>
+   <h1>Heading One</h1>
+   <h2> Heading Two</h2>
+</div>
+<h1>Heading Three</h1>
+<h2>Heading Four </h2>
+</>
+
+During Installation we install the esLint and we have the file inside the react folder file name will be .eslintrc.cjs. That file helps to set some coding rules inside the file and the we can customize the some rules of the coding standard
+
+
+
+
+
+
+
+
+
+
