@@ -1,26 +1,26 @@
 import { Bookmark } from 'lucide-react'
 
-function AppleCard(){
+function AppleCard(props){
     return(
         <>
         <div className="apple_card_wrapper">
             <div className="top-header">
                 <div className="header_left_image">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Amazon_icon.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" />
+                <img src={props.logo} />
                 </div>
                 <div className="header_right_content">
                     <button>Save <Bookmark /></button>
                 </div>
             </div>
             <div className="middle-body">
-               <div className='middle-body__topHeading'> <h4>Amazon</h4> <p>5 days ago</p></div>
-               <div className='designmation-heading'><h3>Senior UI/UX Designer</h3></div>
-               <div className="body-tiles"><h6>Part Time</h6> <h6>Senior Level</h6></div>
+               <div className='middle-body__topHeading'> <h4>{props.companyName}</h4> <p>{props.datePosted}</p></div>
+               <div className='designmation-heading'><h3>{props.post}</h3></div>
+               <div className="body-tiles"><h6>{props.tagOne}</h6> <h6>{props.tagTwo}</h6></div>
             </div>
             <div className="bottom-buttons">
                 <div className="bottom-leftContent">
-                    <h4>$120/hr</h4>
-                    <h6>Mumbai, india</h6>
+                    <h4>{props.payment}</h4>
+                    <h6>{props.location}</h6>
                 </div>
                 <div className="bottom-rightContent">
                     <button> Apply Now</button>
