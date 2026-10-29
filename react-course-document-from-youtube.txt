@@ -181,11 +181,10 @@ we can write code inside the Fragments
 During Installation we install the esLint and we have the file inside the react folder file name will be .eslintrc.cjs. That file helps to set some coding rules inside the file and the we can customize the some rules of the coding standard
 
 REACT COMPONENT
+Component is the collection of the piece of code to solve the specific problem
 
-
-
-
-
+In React component data flow works Parent to Child not child to parent
+From App component to Card component not From Card component to App component 
 
 
 
