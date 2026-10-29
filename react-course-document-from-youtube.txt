@@ -186,6 +186,49 @@ Component is the collection of the piece of code to solve the specific problem
 In React component data flow works Parent to Child not child to parent
 From App component to Card component not From Card component to App component 
 
+code for the app component where we import the card code 
+App.jsx code :- 
+
+import Card from "./component/banner-card" // Component name should start with an uppercase letter
+
+function App() {
+  return ( // Added opening parenthesis to prevent ASI return bug
+    <>
+    <div className="card-parent-wrapper">
+    <Card name='Rohit' age={25} img='https://images.unsplash.com/photo-1580835239846-5bb9ce03c8c3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D'/>
+    <Card name='Mohit' age={58} img='https://images.unsplash.com/photo-1631882456892-54a30e92fe4f?q=80&w=726&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D'/>
+    </div>
+    </>
+  );
+}
+
+export default App;
+
+
+Card.jsx code:- (where we are getting data using the props)
+
+function card(props){
+    return(
+        <>
+        <div className="what-we-doSection">
+            <div className="top-subHeading">
+                <img src={props.img} />
+                <h1>My Name is {props.name}</h1>
+                <h3>My age is {props.age} year's</h3></div>
+        </div>
+        </>
+    )
+}
+export default card
+
+
+==> PROJECT FOR PROPS DRILLING
+
+Lucid Icons is the Library need to install for the react icons which we will use in the project
+
+Code steps:- install the lucide-react and then import to .jsx file and then use it 
+import { Bookmark } from 'lucide-react'
+<button> save <Bookmark /> </button>
 
 
 
