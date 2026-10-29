@@ -230,6 +230,95 @@ Code steps:- install the lucide-react and then import to .jsx file and then use 
 import { Bookmark } from 'lucide-react'
 <button> save <Bookmark /> </button>
 
+You need to create the card static html for the card by this you will understand the simple static coding 
+
+which card you create the static you need to add the Data array of object in the App.jsx with the dummy data which you generated or the added in the app.jsx component
+
+After this you need to map the dummy data using the map function and need to pass the values of the keys in the imported function where I need to show that data.
+
+Json Dummy Object could be anything in the app.jsx
+
+
+App.jsx:--- 
+
+return ( // Added opening parenthesis to prevent ASI return bug
+    <>
+    <div className="card-parent-wrapper">
+    {jobOpenings.map(function(elem){
+      return <div>
+        <AppleCard companyName={elem.companyName} datePosted={elem.datePosted} post={elem.post} tagOne={elem.tag1} tagTwo={elem.tag2} payment={elem.pay} location={elem.location} logo={elem.brandLogo}/>
+      </div>
+    })}    
+         </div>
+
+    
+    </>
+  );
+
+
+Another card component where We Getting the data from the App component
+
+import { Bookmark } from 'lucide-react'
+
+function AppleCard(props){
+    return(
+        <>
+        <div className="apple_card_wrapper">
+            <div className="top-header">
+                <div className="header_left_image">
+                <img src={props.logo} />
+                </div>
+                <div className="header_right_content">
+                    <button>Save <Bookmark /></button>
+                </div>
+            </div>
+            <div className="middle-body">
+               <div className='middle-body__topHeading'> <h4>{props.companyName}</h4> <p>{props.datePosted}</p></div>
+               <div className='designmation-heading'><h3>{props.post}</h3></div>
+               <div className="body-tiles"><h6>{props.tagOne}</h6> <h6>{props.tagTwo}</h6></div>
+            </div>
+            <div className="bottom-buttons">
+                <div className="bottom-leftContent">
+                    <h4>{props.payment}</h4>
+                    <h6>{props.location}</h6>
+                </div>
+                <div className="bottom-rightContent">
+                    <button> Apply Now</button>
+                </div>
+            </div>
+        </div>
+        </>
+    )
+}
+
+export default AppleCard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
