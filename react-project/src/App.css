@@ -182,3 +182,62 @@
     border-right-color: var(--border);
   }
 }
+
+
+
+
+
+/* Apple Card UI */
+
+.apple_card_wrapper{
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+  max-width: 250px;
+}
+.apple_card_wrapper .top-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.apple_card_wrapper .top-header img{
+ width: 40px;
+ border-radius: 50%;
+ padding: 6px;
+ border: 1px solid #333;
+}
+.apple_card_wrapper .header_right_content button{
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 12px;
+  color: #2a2424;
+}
+
+.apple_card_wrapper .middle-body__topHeading{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.apple_card_wrapper .body__topHeading h4{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+}
+
+
+.apple_card_wrapper .body__topHeading p{
+  font-size: 12px;
+  font-weight: 400;
+  color: #a59393;
+}
+
+.apple_card_wrapper .designmation-heading{
+  margin: 0 !important;
+}
