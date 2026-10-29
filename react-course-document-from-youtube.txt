@@ -293,11 +293,8 @@ function AppleCard(props){
 
 export default AppleCard
 
-
-
-
-
-
+React Structure :- We have 2 types of Structure in the React. One is Feature Based Architecture and the second one is the Automatic based Architecture.
+Feature based like we have a feature and created the component regarding this but once we have thee primary button we need to multiple place so we can use that. At the multiple places
 
 
 
