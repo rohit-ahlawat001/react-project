@@ -1,18 +1,11 @@
-function card(){
+function card(props){
     return(
         <>
         <div className="what-we-doSection">
-            <div className="top-subHeading">What we do</div>
-            <div className="topHeader">
-                <div className="left-header">
-                    <h1>
-                        Production-grade solutions for ambitious companies
-                    </h1>
-                </div>
-                <div className="right-header">
-                    <button className="services-button">All services</button>
-                </div>
-            </div>
+            <div className="top-subHeading">
+                <img src={props.img} />
+                <h1>My Name is {props.name}</h1>
+                <h3>My age is {props.age} year's</h3></div>
         </div>
         </>
     )
