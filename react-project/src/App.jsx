@@ -2,6 +2,7 @@ import Card from "./component/banner-card" // Component name should start with a
 import AppleCard from "./component/apple_card"; 
 import { Bookmark } from 'lucide-react'
 import UserData from "./component/section-one/user"; 
+import HereFunctions from "./component/functions/function";
 
 function App() {
 
@@ -115,7 +116,7 @@ function App() {
     remaining_days: 'Last 30 Days',
     user_percentage: '3.53%'
   };
-  console.log(user);
+  // console.log(user);
   
   return ( // Added opening parenthesis to prevent ASI return bug
     <>
@@ -129,6 +130,7 @@ function App() {
         
       <UserData userName= {user.user} userIcon={user.user_icon} totaluser={user.total_user} remaining_days={user.remaining_days}
       percentage={user.user_percentage}/>
+      <HereFunctions />
     </>
   );
 }
