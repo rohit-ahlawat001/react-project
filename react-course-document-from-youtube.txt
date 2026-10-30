@@ -296,6 +296,14 @@ export default AppleCard
 React Structure :- We have 2 types of Structure in the React. One is Feature Based Architecture and the second one is the Automatic based Architecture.
 Feature based like we have a feature and created the component regarding this but once we have thee primary button we need to multiple place so we can use that. At the multiple places
 
+We know that React data flows top to bottom so that we can access the data as we want to access
+Here is some data access or flow steps
+
+Dynamic data in the App.jsx get the data into another .jsx component using the props and we can send that data into another component like  another .jsx component to another .jsx component after binding props into user={props.user} and we can call the props in the .jsx component where we want to print or show that data
+
+FUNCTIONS CALLING IN THE REACT
+
+
 
 
 
