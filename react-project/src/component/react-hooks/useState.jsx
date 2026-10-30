@@ -21,7 +21,6 @@ function gettingFun(){
         SetNum(0)
     }
 
-
     return(
     <>
     <h1 className='userStateHeading'>{Num}</h1>
