@@ -303,6 +303,129 @@ Dynamic data in the App.jsx get the data into another .jsx component using the p
 
 FUNCTIONS CALLING IN THE REACT
 
+We have two types of the function calling one is the Auto and another one is the With click
+
+Auto Function:- Will work auto without click and get the output instantly once the DOM renders
+
+With Click:- When we use the With Click function then Function will execute once user click on the that function or button which refer to that function
+
+TYPES OF THE FUNCTION CLICK:-
+
+1. OnClick:- Once user click on the function then function will execite
+2. OnDoubleClick:- Once user hit the double click then function will execute.
+3. OnMouceEnter:- Once user hover on the button then Mouce Enter will work and on the click OnClick function will work.
+
+With the functions click I can use the Inline fuction to print the someting code example given below
+
+1. On click Function Code:- 
+
+// Added the even listner on the click on the button 
+function hereFunctions(){
+    function btnClicked(){
+        console.log("btn Clicked");
+    }
+    return(
+        <>
+        <div className="functions-wrapper">
+            <h1>Hi Im Rohit</h1>
+            <button onClick={btnClicked}>Click This</button>
+        </div>
+        </>
+    )
+}
+export default hereFunctions
+
+2. Inline function code
+ 
+ <button style={{margin:"20px" }} onClick={function(){
+                console.log("Inline Function Clicked")
+            }}>Click Inline Function</button>
+
+
+2. Getting input from the Input Filed
+
+<input onChange={function(elem){
+                inputChanging(elem.target.value)
+            }} type="text" placeholder="Enter the Name" />
+
+   function inputChanging(inputValue){
+        console.log(inputValue);
+        
+    }
+
+GETTING THE PAGE SCROLL SPEED WITH THE FUNCTION name "on Wheel"
+Code given Below
+
+ <div onWheel={(elem)=>{
+                pageScrolling(elem.deltaY)
+            }}> Page Scrolling</div>
+
+    const pageScrolling = (elem)=>{
+        // debugger
+        console.log("scrolling page", elem);
+    }
+
+
+REACT HOOKS:- 
+
+At the we have the functional or the class components but now we have the the Hooks by using the hooks we have advance hands to define the states of the Components
+
+Basicaly hooks are the special or the magical functions which use the do a specific task.
+
+Types of Hooks:-  useState, useEffect, useRef, useContext, useReducer, useMemo, useCallback
+
+useState:- useState is basically is like that we have already content is Rohit and now we change It to Rohit Ahlawat so we have change the state of the content from Rohit to Rohit Ahlawat.
+
+In simple words useState manages the states   
+
+useEffect:- Generally we use the this to run the code or the things parallelly without disturbing any main function or the feature like the api call we understand this further.
+In simpe words if we want to run someting in the sidestack then we use the useEffect for this. Like(API call, DOM manipulation, event listner) 
+
+UseRef:- It use to select any don element. IF you want to select anything you'll use the useRef. It takes refrence from the elements.
+
+useContext:- IT use to handle the global context. When we need to manage the global contect then we use the useContext.
+We create any fature or the code which will be reusable in the web then we use the useContext. Like Whole website Dark Theme or the Light theme we apply the useContext for this.
+
+useReducer:-  When we want to handle the complex global state then we use the useReducer
+
+useMemo/useCallback:- used to handle the rerender or the code or features. And helps to optimize the code 
+
+ 
+useState Hook:- We can not directly change the value of the varibles we need to use the react hooks to change the any value.
+
+We'll get the two values in the useState hook One is the Read Only and the Second One is the Write Only
+
+To use the useState need to import the useState fromthe react
+
+import {useState} from 'react'
+
+const [num(read only redefined), setNum(write only need to change the value)] = useState(10) "defined the value of the varible 10"
+
+
+const [num, setNum] = useStte(10)
+
+function changeNum(){
+setNum(30)
+}
+
+
+return(
+
+<h1> value of num is {num}</h1>
+<button> onClick={changeNu}>Click</button>
+)
+ 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
