@@ -1,6 +1,7 @@
 import Card from "./component/banner-card" // Component name should start with an uppercase letter
 import AppleCard from "./component/apple_card"; 
 import { Bookmark } from 'lucide-react'
+import UserData from "./component/section-one/user"; 
 
 function App() {
 
@@ -106,19 +107,28 @@ function App() {
       location: "Mumbai, India"
     }
   ];
-  // console.log(jobOpenings);
+
+  const user = {
+    user: 'Rohit Ahlawat',
+    user_icon: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original',
+    total_user: 10590,
+    remaining_days: 'Last 30 Days',
+    user_percentage: '3.53%'
+  };
+  console.log(user);
   
   return ( // Added opening parenthesis to prevent ASI return bug
     <>
     <div className="card-parent-wrapper">
-    {jobOpenings.map(function(elem){
-      return <div>
+    {jobOpenings.map(function(elem, idx){
+      return <div key={idx}>
         <AppleCard companyName={elem.companyName} datePosted={elem.datePosted} post={elem.post} tagOne={elem.tag1} tagTwo={elem.tag2} payment={elem.pay} location={elem.location} logo={elem.brandLogo}/>
       </div>
     })}    
          </div>
-
-    
+        
+      <UserData userName= {user.user} userIcon={user.user_icon} totaluser={user.total_user} remaining_days={user.remaining_days}
+      percentage={user.user_percentage}/>
     </>
   );
 }
