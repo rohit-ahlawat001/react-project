@@ -3,6 +3,7 @@ import AppleCard from "./component/apple_card";
 import { Bookmark } from 'lucide-react'
 import UserData from "./component/section-one/user"; 
 import HereFunctions from "./component/functions/function";
+import GettingFun  from "./component/react-hooks/useState";
 
 function App() {
 
@@ -131,6 +132,7 @@ function App() {
       <UserData userName= {user.user} userIcon={user.user_icon} totaluser={user.total_user} remaining_days={user.remaining_days}
       percentage={user.user_percentage}/>
       <HereFunctions />
+      <GettingFun />
     </>
   );
 }
