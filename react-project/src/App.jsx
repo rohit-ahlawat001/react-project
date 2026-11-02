@@ -4,6 +4,7 @@ import { Bookmark } from 'lucide-react'
 import UserData from "./component/section-one/user"; 
 import HereFunctions from "./component/functions/function";
 import GettingFun  from "./component/react-hooks/useState";
+import FormsHandler from "./component/react-forms/forms";
 
 function App() {
 
@@ -133,6 +134,7 @@ function App() {
       percentage={user.user_percentage}/>
       <HereFunctions />
       <GettingFun />
+      <FormsHandler />
     </>
   );
 }
