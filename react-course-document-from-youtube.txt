@@ -415,39 +415,118 @@ return(
 <button> onClick={changeNu}>Click</button>
 )
 
-Code for the useState Hook 
- 
+Code for the useState Hook added below
+
+import {useState} from 'react'
+
+function gettingFun(){
+
+    const [Num, SetNum] = useState(0)
 
 
+    function increaseNum(){
+        SetNum(Num + 1)
+    }
+    function decreaseNum(){
+        SetNum(Num - 1)
+    }
+    function decreaseByFive(){
+        SetNum(Num - 5)
+    }
+    function incraseByFive(){
+        SetNum(Num + 5)
+    }
+    function resetNum(){
+        SetNum(0)
+    }
+
+    return(
+    <>
+    <h1 className='userStateHeading'>{Num}</h1>
+    <button onClick={increaseNum} className='button-wrap'>Increase</button>
+    <button onClick={decreaseNum} className='button-wrap'>Decrease</button>
+    <button onClick={decreaseByFive} className='button-wrap'>Decrease by 5</button>
+    <button onClick={incraseByFive} className='button-wrap'>Increase by 5</button>
+    <button onClick={resetNum} className='button-wrap'>Reset</button>
+    
+    </>
+    )
+}
+
+export default gettingFun
+
+ADVANCE useState 
+
+We have two operations in the JS
+
+1. Sync:- Code working in the order wise in the sync one like another line. one process two process
+
+ 2. Async:- Like the code working before and after (Aage Piche)
+Async operations work one step behind in the console but the code updated into UI
+
+React value of Re-render nhi krta suppose we have value 10 and we print 10 into the value again then react will not work
+
+JS sNOTES:- Arr, Function and the Objects are the reference variables
+because they do not have their values they take the values as reference so they knows as the reference variables 
+
+I we have data in the form of object then I can not change the direct data I need to de-structure the object then I can change or update the values in the Object
+
+Example:- const [num, setNum] = useState({user:'Rohit', age:25})
+
+const btnClicked =() =>{
+const newNum = {...num}
+console.log(newNum)
+newNum.user = "Mohit"
+setNum(newNum)
+}
+
+HTML PART
+
+<div>
+<h1>{num.user}, {num.age}</h1>
+<button onClick={btnclicked}>Click</button>
+</div>
 
 
+BATCH UPDATE:- If we write multiple functions to perform one task then only one task will be completed at once
 
+example for batch update:- 
 
+const btnClicked = () => {
+ setNum(prev => (prev + 1))
+ setNum(prev => (prev + 1))
+ setNum(prev => (prev + 1))
+}
 
+FORMS HANDLING INPUT FILED
 
+React Forms There is a behavior in the form if we submit in the form then React Form gets auto realod. But to avoid the form auto reload on submit. Then need to use the preventDefault() to avoid the form auto reload.
 
+This preventDefault() stands for the React Form Handler
 
+Example:- 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function FormsHandler() {
+ const submitForm = (e) => {
+    e.preventDefault();
+    console.log("Form Submittes");
+}
+  return (
+    <div className="forms-wrapper">
+      <h1>Forms Component</h1>
+      {/* Add your form elements here */}
+      <form onSubmit={(e) => {
+        submitForm(e);
+      }}>
+        {/* <input type="text" placeholder="Enter your email" />
+        <input type="password" placeholder="Enter your password" /> */}
+      <input type="text" placeholder="Enter your name" />
+      <button>Submit</button>
+      </form>
+    </div>
+  );
+}
+export default FormsHandler;
 
 
 
