@@ -529,5 +529,8 @@ function FormsHandler() {
 export default FormsHandler;
 
 
+TWO WAY INPUT BINDING
+
+
 
 
